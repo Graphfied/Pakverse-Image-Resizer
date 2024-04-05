@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAKVERSE Image Resizer</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <div class="container mx-auto px-4 py-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-8 text-center text-gray-100">PAKVERSE Image Resizer</h1>
+        <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl">
+            <label for="upload" class="block w-full bg-blue-500 text-white py-3 px-4 rounded cursor-pointer mb-5 text-center transition duration-300 ease-in-out hover:bg-blue-600">
+                Upload Image
+                <input id="upload" type="file" accept="image/*" class="hidden">
+            </label>
+            <div id="fileNameDisplay" class="text-gray-400 text-sm mb-4 text-center">
+                <!-- Selected file name will be displayed here -->
+            </div>
+            <div id="preview" class="flex justify-center mb-6">
+                <!-- Image will be displayed here -->
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 mb-6">
+                <input id="width" type="number" class="w-32 border p-2 rounded bg-gray-700 text-white" placeholder="Width in px">
+                <input id="height" type="number" class="w-32 border p-2 rounded bg-gray-700 text-white" placeholder="Height in px">
+                <button id="resizeButton" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded">
+                    Resize
+                </button>
+            </div>
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button id="downloadPng" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">
+                    Download PNG
+                </button>
+                <button id="downloadJpg" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded">
+                    Download JPG
+                </button>
+                <button id="downloadJpeg" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-6 rounded">
+                    Download JPEG
+                </button>
+                <button id="removeImageButton" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded">
+                    Remove Image
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
